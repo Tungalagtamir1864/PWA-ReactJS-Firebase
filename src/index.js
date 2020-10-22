@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { CSSTransitionGroup } from 'react-transition-group'
 // import Menu from './components/menu/NavBar'
 // import Barang from './components/barang/Barang'
 
@@ -13,7 +15,6 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    {/* <Menu items={items}/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
