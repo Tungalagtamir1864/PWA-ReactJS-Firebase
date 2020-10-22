@@ -4,17 +4,22 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { CSSTransitionGroup } from 'react-transition-group'
+import Navbar from './Navbar';
+import Footer from './components/Footer';
+
+// import { CSSTransitionGroup } from 'react-transition-group'
 // import Menu from './components/menu/NavBar'
 // import Barang from './components/barang/Barang'
 
 // const items = ['Home', 'Pesan Barang', 'About', 'Contact us'];
 
 
-
 ReactDOM.render(
+
   <React.StrictMode>
+    <Navbar />
     <App />
+    <Footer/>
   </React.StrictMode>,
   document.getElementById('root')
 );

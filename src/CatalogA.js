@@ -26,7 +26,7 @@ export default class CatalogA extends Component {
 
     handleAdd() {
         const newProducts = this.state.products.concat([
-            { id: this.state.length + 1, title: prompt('Enter product name'), price: prompt('Enter product price') }
+            { id: this.state.length + 1, title: prompt('Enter product name'), price: prompt('Enter product price'), description: prompt('Enter description product') }
         ]);
         this.setState((state) => ({ length: state.length + 1, products: newProducts }));
     }
@@ -48,12 +48,29 @@ export default class CatalogA extends Component {
                 <span onClick={()=> this.handleRemove(product.id)} style={{ color: "red", cursor: "pointer"}}>X</span>
                 {/* <span onClick={()=> this.handleRemove(product.id)} style={{ color: "red", cursor: "pointer"}}>X</span> */}
                 
-            {product.title} Rp. {product.price*14000}
+            <div className="container-fluid card-deck mb-5">
+                    <div className="col-md-4">
+                        <img src={product.image} className="card-img-top" alt="..."></img>
+                    </div>
+                <div className="card shadow-lg">
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            <h3 class="card-title">{product.title}</h3>
+                            <small class="card-title text-muted my-3"> <b>Harga: Rp. {product.price*14000}</b></small><br/>
+                            <p class="card-text text-muted">{product.description}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         )
         return (
             <div style={{ textAlign: 'left'}}>
-            <button className="btn btn-success" onClick={this.handleAdd} style={{ padding: "5px 20px"}}><b>Add Item</b></button>
+                <div className="text-center">
+                <button className="btn btn-success" onClick={this.handleAdd} style={{ padding: "5px 20px"}}><b>Tambah Product</b></button>
+                </div>
+            
                 <CSSTransitionGroup
                     transitionName="fade"
                     transitionEnterTimeout={600}
