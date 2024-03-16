@@ -1,16 +1,15 @@
 
 import firebase from 'firebase'
 
-
   // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDLGMgk7ePQQ3gJTfFm9jiKYEFdGsl0wWE",
-    authDomain: "pwa-hilman.firebaseapp.com",
-    databaseURL: "https://pwa-hilman.firebaseio.com",
-    projectId: "pwa-hilman",
-    storageBucket: "pwa-hilman.appspot.com",
-    messagingSenderId: "770682615953",
-    appId: "1:770682615953:web:00ab86888a655fc183a730"
+  apiKey: "AIzaSyATg_56UvVHdwUUZUkxGue202N29PaVRyk",
+  authDomain: "diplomtursh.firebaseapp.com",
+  projectId: "diplomtursh",
+  storageBucket: "diplomtursh.appspot.com",
+  messagingSenderId: "313574540879",
+  appId: "1:313574540879:web:73b03c08b11e709adecc3a",
+  measurementId: "G-KCWHWJ5JXM"
 };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
